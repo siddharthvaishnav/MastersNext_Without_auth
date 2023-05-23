@@ -1,0 +1,3 @@
+[submodule "master-frontend"]
+	path = master-frontend
+	url = https://github.com/siddharthvaishnav/master-frontend
