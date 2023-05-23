@@ -73,13 +73,24 @@ class College(models.Model):
             "cat": self.cat,
             "books": self.books,
 
+
         }
         return college
 
 
 class Scholarship(models.Model):
     name = models.CharField(max_length=255)
-    desc = models.CharField(max_length=50)
+    desc = models.TextField(default=None)
     amount = models.FloatField(max_length=255)
     deadline = models.CharField(max_length=50)
     link = models.CharField(max_length=250)
+
+    def scholar_dict(self):
+        scholarship = {
+            "name": self.name,
+            "desc": self.desc,
+            "amount": self.amount,
+            "deadline": self.deadline,
+            "link": self.link
+        }
+        return scholarship
